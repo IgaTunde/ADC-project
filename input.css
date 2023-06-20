@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+    .slide-in {
+      position: relative;
+      animation-name: slide-in;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes slide-in {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .grid-text {
+      transition: transform 0.3s ease-in;
+    }
+
+    .grid-text:hover {
+      transform: translateY(5px);
+      
+    }
+
+    .button {
+      display: inline-block;
+      height: 60px;
+      width: 60px; 
+      overflow: hidden;
+      margin: 0 5px;
+      background-color: #E5E5E5;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: inherit;
+      transition: all 0.3s ease-in;
+    }
+
+    .button:hover {
+      width: 200px;
+      border-radius: 50px;  
+    }
+
+    .button .icon {
+      display: inline-block;
+      text-align: center;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      line-height: 60px;
+      transition: all 0.3s ease-in;
+     }
+    
+     .button:nth-child(2):hover .icon {
+      background-color: #1da1fe;
+    }
+
+    .button:nth-child(1):hover .icon {
+      background-color: #c32aa3;
+    }
+
+    .button:hover .icon i {
+      color: #fff;
+     }
+
+     .button:nth-child(2):hover span {
+      color: #1da1fe;
+     }
